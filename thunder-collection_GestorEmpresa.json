@@ -1,0 +1,395 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "GestorEmpresa",
+    "dateExported": "2024-03-01T00:21:41.473Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "fbe0fe9c-2e16-4d40-984e-b696f9e4ef83",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-02-29T03:04:52.736Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "f1dcc00a-4146-4b24-8129-4956af40c048",
+            "name": "Category",
+            "containerId": "",
+            "created": "2024-02-29T03:24:48.949Z",
+            "sortNum": 20000,
+            "settings": {
+                "headers": [
+                    {
+                        "name": "token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmZmYyNzEyM2IwOWEzMGRiYmI5ODgiLCJlbWFpbCI6Imxlc2NvYmFyLTIwMTk1NzhAa2luYWwuZWR1Lmd0IiwibmFtZSI6IkxsYW5lbCIsImlhdCI6MTcwOTI1MTI5MywiZXhwIjoxNzA5MjYyMDkzfQ.QNMOJmB7-6_dhjBxLIU1mPGpehjLqEaf9__JtxeLlmE"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "073c61c0-8994-452e-b185-960c9a38fc05",
+            "name": "Company",
+            "containerId": "",
+            "created": "2024-02-29T03:25:14.580Z",
+            "sortNum": 40000,
+            "settings": {
+                "headers": [
+                    {
+                        "name": "token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmZmYyNzEyM2IwOWEzMGRiYmI5ODgiLCJlbWFpbCI6Imxlc2NvYmFyLTIwMTk1NzhAa2luYWwuZWR1Lmd0IiwibmFtZSI6IkxsYW5lbCIsImlhdCI6MTcwOTI1MTI5MywiZXhwIjoxNzA5MjYyMDkzfQ.QNMOJmB7-6_dhjBxLIU1mPGpehjLqEaf9__JtxeLlmE"
+                    }
+                ]
+            }
+        }
+    ],
+    "requests": [
+        {
+            "_id": "577c0b9f-16ee-4539-a222-a592a5847adf",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "fbe0fe9c-2e16-4d40-984e-b696f9e4ef83",
+            "name": "register",
+            "url": "user/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-29T03:04:52.739Z",
+            "modified": "2024-02-29T03:51:03.477Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Llanel"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Escobar"
+                    },
+                    {
+                        "name": "username",
+                        "value": "lescobar"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "email",
+                        "value": "lescobar-2019578@kinal.edu.gt"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "30331603"
+                    },
+                    {
+                        "name": "role",
+                        "value": "ADMIN",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "aff087f0-12a0-41f2-8d31-b11e30beb77f",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "f1dcc00a-4146-4b24-8129-4956af40c048",
+            "name": "Create",
+            "url": "category/createCategory",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-29T03:27:33.510Z",
+            "modified": "2024-02-29T04:35:51.314Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Electromecanica"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Hace todo tipo de ventas en la parte mercantil"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f2b1d451-1ebf-4fc3-afe6-6797e4be6847",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "fbe0fe9c-2e16-4d40-984e-b696f9e4ef83",
+            "name": "login",
+            "url": "user/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-29T03:04:52.739Z",
+            "modified": "2024-02-29T03:56:33.634Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "lescobar",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "email",
+                        "value": "lescobar-2019578@kinal.edu.gt"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e4969430-4e1f-430e-83d0-bfe83ceeab0d",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "f1dcc00a-4146-4b24-8129-4956af40c048",
+            "name": "Test",
+            "url": "category/test",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-29T03:30:35.996Z",
+            "modified": "2024-02-29T03:31:39.306Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c0055a61-5f81-4e1a-bab0-82f0f4678e20",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "f1dcc00a-4146-4b24-8129-4956af40c048",
+            "name": "Update",
+            "url": "category/updateCategory/65dffa4104edc3a324c791ae",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-29T03:32:43.941Z",
+            "modified": "2024-02-29T03:34:52.283Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Electrodomesticos"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "97372827-5c9c-4cbf-804d-309eb93df75b",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "f1dcc00a-4146-4b24-8129-4956af40c048",
+            "name": "Delete",
+            "url": "",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-02-29T03:35:23.315Z",
+            "modified": "2024-02-29T03:35:23.315Z",
+            "headers": []
+        },
+        {
+            "_id": "7472fab5-3154-42e3-a37c-75eee07766e1",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "f1dcc00a-4146-4b24-8129-4956af40c048",
+            "name": "Get all categories",
+            "url": "category/getAllCategories",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-02-29T03:36:04.666Z",
+            "modified": "2024-02-29T03:36:58.988Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f2d06d22-5782-4ea8-b540-c852aff3f1e8",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "f1dcc00a-4146-4b24-8129-4956af40c048",
+            "name": "Get by id Category",
+            "url": "category/getCategory/65dffa4104edc3a324c791ae",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-02-29T03:36:19.498Z",
+            "modified": "2024-02-29T03:37:22.913Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3cc91729-5e5e-4d8b-8b2d-7db1785b7409",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "fbe0fe9c-2e16-4d40-984e-b696f9e4ef83",
+            "name": "Delete",
+            "url": "user/delete/65dffca40c79fb773229e49f",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-02-29T03:49:24.761Z",
+            "modified": "2024-02-29T03:50:53.171Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRmZmNhNDBjNzlmYjc3MzIyOWU0OWYiLCJlbWFpbCI6Imxlc2NvYmFyLTIwMTk1NzhAa2luYWwuZWR1Lmd0IiwibmFtZSI6IkxsYW5lbCIsImlhdCI6MTcwOTE3ODYyNiwiZXhwIjoxNzA5MTg5NDI2fQ.u1Xvhfy2AZHbn6hVXwgGDxbl5C3fHJsD11tnFUSN8cg"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b937aa7a-7c36-4ed6-8b8b-6f6e0e7a730f",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "073c61c0-8994-452e-b185-960c9a38fc05",
+            "name": "Add ",
+            "url": "company/addCompany",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-02-29T03:58:35.516Z",
+            "modified": "2024-02-29T04:36:11.784Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Honda"
+                    },
+                    {
+                        "name": "levelImpact",
+                        "value": "Alto"
+                    },
+                    {
+                        "name": "yearsExp",
+                        "value": "30"
+                    },
+                    {
+                        "name": "category",
+                        "value": "65e009a75e9dc52d408976df"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5322986a-e57d-4df0-9d88-14a7ad9fd1bf",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "073c61c0-8994-452e-b185-960c9a38fc05",
+            "name": "View Companies ",
+            "url": "company/viewCompanies?sortOptionAZ=desc",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-02-29T04:07:37.848Z",
+            "modified": "2024-02-29T04:45:21.294Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "filterByYears",
+                    "value": "5",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "filterByCategory",
+                    "value": "65dffa4104edc3a324c791ae",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "sortBy",
+                    "value": "name",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "sortOrder",
+                    "value": "desc",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "sortOptionAZ",
+                    "value": "desc",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "47f1dcef-3ef2-4d45-89d2-a1c91cc3cd5c",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "073c61c0-8994-452e-b185-960c9a38fc05",
+            "name": "Update",
+            "url": "company/updateCompany/65e005b5c6142598fb214641",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2024-02-29T04:20:17.781Z",
+            "modified": "2024-02-29T04:32:44.781Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Zac"
+                    },
+                    {
+                        "name": "yearsExp",
+                        "value": "25"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1f4324f6-12dd-439e-946d-868639eacc64",
+            "colId": "c153a0b6-8edf-4808-a0b2-49a11d47272a",
+            "containerId": "073c61c0-8994-452e-b185-960c9a38fc05",
+            "name": "Excel",
+            "url": "company/excel",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-02-29T23:57:08.422Z",
+            "modified": "2024-02-29T23:58:15.725Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:7077/"
+        }
+    }
+}
