@@ -83,21 +83,43 @@ export const getCompaniesExcel = async (_req, res) => {
         let workbook = new ExcelJS.Workbook();
         let worksheet = workbook.addWorksheet('Companies');
 
-        // Pone los encabezados de cada columna
+        // Pone los encabezados de cada columna con formato
         worksheet.columns = [
             { header: 'Name', key: 'name', width: 20 },
-            { header: 'Years of Experience', key: 'yearsExp', width:20},
+            { header: 'Years of Experience', key: 'yearsExp', width: 20 },
             { header: 'Category', key: 'category', width: 20 },
             { header: 'Description', key: 'description', width: 100 }
         ];
+
+        // Aplicar estilos a los encabezados de columna
+        worksheet.getRow(1).eachCell((cell) => {
+            cell.fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'FFA500' } // Color de fondo naranja
+            };
+            cell.font = { bold: true }; // negrita
+        });
+
+        // bordes de la tabla
+        worksheet.eachRow({ includeEmpty: false }, function (row, rowNumber) {
+            row.eachCell({ includeEmpty: false }, function (cell, colNumber) {
+                cell.border = {
+                    top: { style: 'thin' },
+                    left: { style: 'thin' },
+                    bottom: { style: 'thin' },
+                    right: { style: 'thin' }
+                };
+            });
+        });
 
         // Agregar datos de empresas al documento Excel
         companies.forEach(company => {
             worksheet.addRow({
                 name: company.name,
                 yearsExp: company.yearsExp,
-                category: company.category.name, 
-                description: company.category.description 
+                category: company.category.name,
+                description: company.category.description
             });
         });
 
@@ -106,7 +128,7 @@ export const getCompaniesExcel = async (_req, res) => {
         await workbook.xlsx.writeFile(filePath);
         res.attachment(filePath);
 
-        // Enviar el archivo 
+        // Enviar el archivo
         res.send();
     } catch (err) {
         console.error(err);
